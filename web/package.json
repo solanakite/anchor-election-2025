@@ -19,7 +19,6 @@
     "@wallet-standard/core": "^1.1.1",
     "@wallet-standard/react": "^1.0.1",
     "bs58": "^6.0.0",
-    "buffer": "^6.0.3",
     "react": "^19",
     "react-dom": "^19",
     "react-error-boundary": "^5.0.0",
