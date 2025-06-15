@@ -12,6 +12,8 @@ import { useWalletAccountTransactionSendingSigner } from "@solana/react";
 // We use this to use our RPC and RPC subscriptions with the connected wallet
 import { type UiWalletAccount } from "@wallet-standard/react";
 import { ChainContext } from "../context/ChainContext";
+
+// Import out Kite 'connection' object with all the Kit factories set up
 import { ConnectionContext } from "../context/ConnectionContext";
 
 import { useContext, useState, useEffect } from "react";
