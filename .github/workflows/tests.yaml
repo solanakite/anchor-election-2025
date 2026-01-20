@@ -13,11 +13,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: metaDAOproject/setup-anchor@main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          anchor-version: "0.32.1"
-          solana-cli-version: "2.3.0"
           node-version: "22.14.0"
+
+      - name: Install Solana CLI
+        run: |
+          sh -c "$(curl -sSfL https://release.anza.xyz/v2.3.0/install)"
+          echo "$HOME/.local/share/solana/install/active_release/bin" >> $GITHUB_PATH
+
+      - name: Install Anchor CLI 0.32.1 from source
+        run: |
+          cargo install --git https://github.com/coral-xyz/anchor --tag v0.32.1 anchor-cli --locked --force
 
       # Pre-download Cargo dependencies to avoid messages during version checks
       - name: Pre-download dependencies
