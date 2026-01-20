@@ -88,5 +88,6 @@ jobs:
           cat build.log
           echo "----------------------------------------"
           echo "Checking for errors or warnings in build.log..."
-          grep -qiEvz 'error:|warning:|failed' build.log
+          # Ignore expected Anchor 0.32.1 cfg warnings
+          grep -v "unexpected \`cfg\` condition value" build.log | grep -qiEvz 'error:|warning:|failed'
           echo $?
