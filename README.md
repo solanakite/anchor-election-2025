@@ -1,8 +1,8 @@
-# Anchor Election 2025 (aka Voting app)
+# Anchor Election 2026 (aka Voting app)
 
 ## 🆕 Updated for Solana Kit, Kite, and Codama
 
-[![CI Badge](https://github.com/solanakite/anchor-election-2025/actions/workflows/tests.yaml/badge.svg)](https://github.com/solanakite/anchor-election-2025/actions)
+[![CI Badge](https://github.com/solanakite/anchor-election-2026/actions/workflows/tests.yaml/badge.svg)](https://github.com/solanakite/anchor-election-2026/actions)
 
 A new version of [onchain voting from the Anchor docs](https://examples.anchor-lang.com/docs/onchain-voting). 
 
@@ -39,7 +39,7 @@ Anchor:
 Node:
   v22.14.0
 Rust:
-  rustc 1.86.0 (05f9846f8 2025-03-31)
+  rustc 1.86.0 (05f9846f8 2026-03-31)
 build-sbf version:
   solana-cargo-build-sbf 2.1.21
 ```
@@ -51,8 +51,8 @@ Using different versions may cause compatibility issues.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/mikemaccana/anchor-election-2025.git
-   cd anchor-election-2025
+   git clone https://github.com/mikemaccana/anchor-election-2026.git
+   cd anchor-election-2026
    ```
 
 2. Install dependencies:
@@ -64,10 +64,7 @@ Using different versions may cause compatibility issues.
 3. Run tests:
 
    ```bash
-   # RUSTUP_TOOLCHAIN is needed for consistent builds per
-   # https://solana.stackexchange.com/questions/21664/why-is-the-same-commit-of-an-anchor-repo-giving-different-results-when-run-at-di
-   # TODO: remove when no longer necessary
-   RUSTUP_TOOLCHAIN=nightly-2025-04-16 anchor test
+   anchor test
    ```
 
 4. Deploy the program:
